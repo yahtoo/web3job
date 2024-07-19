@@ -83,3 +83,48 @@ pub struct Tag {
     pub tagId: i32,
     pub tagName: String,
 }
+
+#[derive(Deserialize, Debug)]
+pub struct JobDetailApiResponse {
+    errorCode: i32,
+    message: String,
+    data: JobDetail,
+    success: bool,
+}
+
+#[derive(Deserialize, Debug)]
+pub struct JobDetail {
+    topicId: i32,
+    content: String,
+    content2: String,
+    content3: String,
+    content5: String,
+    email: Option<String>,
+    phone: Option<String>,
+    wechat: Option<String>,
+    telegram: Option<String>,
+    positionName: String,
+    positionId: i32,
+    viewCount: i32,
+    applied: bool,
+    applyCount: i32,
+    createTime: i64,
+    url: String,
+    workTypeId: i32,
+    workTypeName: String,
+    officeModeId: i32,
+    officeModeName: String,
+    company: String,
+    companyIntroduction: String,
+    companySizeName: String,
+    companyLogo: String,
+    companyWebsite: String,
+    companyId: i32,
+    minSalary: f64,
+    maxSalary: f64,
+    leverId: i32,
+    leverName: String,
+    location: Option<String>,
+    base: String,
+    status: i32,
+}
